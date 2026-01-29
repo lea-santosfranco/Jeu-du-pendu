@@ -13,22 +13,22 @@
         let lettresTrouvées = "";
 
         while (mauvaisesLettres.length <10 && lettresAttendues >0){
-            if (mauvaisesLettres >10){
-                alert("Perdu");
-            }
-            if (lettresAttendues <0){
-                alert("Bravo");
-            }
+            
             let lettres = prompt("Choisir une lettre");
-            if (lettres === lettresAttendues){
-                pop()
-                alert("Oui");
+            if (lettresAttendues.indexOf(lettres) !== -1){
+                let compteur = 0;
+                while (lettresAttendues.indexOf(lettres) !== -1){
+                    let lettreProposee = lettresAttendues.indexOf(lettres);
+                    lettresAttendues.splice(lettreProposee, 1);
+                    compteur++;
+                }
+            lettresTrouvées+=lettres;
             }
-            else { 
-                push(mauvaisesLettres)
-                alert("Non");
+            else{
+                mauvaisesLettres.push(lettres)
             }
         }
+        
     </script>
 </body>
 </html>
