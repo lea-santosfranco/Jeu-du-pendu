@@ -7,10 +7,10 @@
 </head>
 <body>
     <script>
-        let motSecret = "super"
-        var lettresAttendues = ["s","u","p","e","r"]
-        var mauvaisesLettres = []
-        let lettresTrouvées = ""
+        let motSecret = "super";
+        var lettresAttendues = ["s","u","p","e","r"];
+        var mauvaisesLettres = [];
+        let lettresTrouvées = "";
 
         while (mauvaisesLettres.length <10 && lettresAttendues >0){
             if (mauvaisesLettres >10){
@@ -19,7 +19,15 @@
             if (lettresAttendues <0){
                 return "Bravo"
             }
-            
+            let lettres = prompt("Choisir une lettre");
+            if (lettres === lettresAttendues){
+                pop()
+                return "Oui"
+            }
+            else { 
+                push(mauvaisesLettres)
+                return "Non"
+            }
         }
     </script>
 </body>
