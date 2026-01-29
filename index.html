@@ -14,19 +14,19 @@
 
         while (mauvaisesLettres.length <10 && lettresAttendues >0){
             if (mauvaisesLettres >10){
-                return "Perdu"
+                alert("Perdu");
             }
             if (lettresAttendues <0){
-                return "Bravo"
+                alert("Bravo");
             }
             let lettres = prompt("Choisir une lettre");
             if (lettres === lettresAttendues){
                 pop()
-                return "Oui"
+                alert("Oui");
             }
             else { 
                 push(mauvaisesLettres)
-                return "Non"
+                alert("Non");
             }
         }
     </script>
