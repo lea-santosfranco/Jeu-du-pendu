@@ -3,32 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon jeu du pendu</title>
+    <title>Test</title>
 </head>
 <body>
-    <script>
-        let motSecret = "super";
-        var lettresAttendues = ["s","u","p","e","r"];
-        var mauvaisesLettres = [];
-        let lettresTrouvées = "";
 
-        while (mauvaisesLettres.length <10 && lettresAttendues >0){
-            
-            let lettres = prompt("Choisir une lettre");
-            if (lettresAttendues.indexOf(lettres) !== -1){
-                let compteur = 0;
-                while (lettresAttendues.indexOf(lettres) !== -1){
-                    let lettreProposee = lettresAttendues.indexOf(lettres);
-                    lettresAttendues.splice(lettreProposee, 1);
-                    compteur++;
-                }
-            lettresTrouvées+=lettres;
+    <script>
+        let playlist = ["titre 1", "titre 2", "titre 3", "titre 4"];
+        console.log(playlist)
+        for (i = 0; i < 10; i++);
+        while (){
+            let nouveauMorceau = prompt("Ajouter un nouveau morceau/stop");
+            if (nouveauMorceau === "stop") break;
+            let ajoutMorceau  = prompt("Remplacer la deuxième musique? oui/non");
+            let morceau = prompt("Quelle musique voulez-vous ajouter?");
+            if (ajoutMorceau === "oui"){
+                splice(2 , 1)
+                playlist.push(morceau)
             }
-            else{
-                mauvaisesLettres.push(lettres)
+            else {
+                break
+            };
+
+            if (playlist.length > 10){
+                splice(0 , 1);
             }
+            alert("Limite atteinte. Premier morceau supprimé.");
+
+            alert(playlist + morceau);
         }
-        
+
     </script>
 </body>
 </html>

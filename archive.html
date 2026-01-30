@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+        let motSecret = "super";
+        var lettresAttendues = ["s","u","p","e","r"];
+        var mauvaisesLettres = [];
+        let lettresTrouvées = "";
+
+        while (mauvaisesLettres.length <10 && lettresAttendues >0){
+            
+            let lettres = prompt("Choisir une lettre");
+            if (lettresAttendues.indexOf(lettres) !== -1){
+                let compteur = 0;
+                while (lettresAttendues.indexOf(lettres) !== -1){
+                    let lettreProposee = lettresAttendues.indexOf(lettres);
+                    lettresAttendues.splice(lettreProposee, 1);
+                    compteur++;
+                }
+            lettresTrouvées+=lettres;
+            }
+            else{
+                mauvaisesLettres.push(lettres)
+            }
+        }
+        
+    </script>
+
+
+</body>
+</html>
