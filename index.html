@@ -9,27 +9,23 @@
 
     <script>
         let playlist = ["titre 1", "titre 2", "titre 3", "titre 4"];
-        console.log(playlist)
-        for (i = 0; i < 10; i++);
-        while (){
-            let nouveauMorceau = prompt("Ajouter un nouveau morceau/stop");
+        while (true){
+            let nouveauMorceau = prompt(playlist + "\n"+ "Ajouter un nouveau morceau/stop");
             if (nouveauMorceau === "stop") break;
             let ajoutMorceau  = prompt("Remplacer la deuxième musique? oui/non");
             let morceau = prompt("Quelle musique voulez-vous ajouter?");
             if (ajoutMorceau === "oui"){
-                splice(2 , 1)
-                playlist.push(morceau)
+                playlist.splice(1 , 1, morceau);
+                playlist.push(morceau);
             }
             else {
-                break
-            };
+                break;
+            }
 
             if (playlist.length > 10){
-                splice(0 , 1);
+                playlist.splice(0 , 1);
+                alert("Limite atteinte. Premier morceau supprimé.");
             }
-            alert("Limite atteinte. Premier morceau supprimé.");
-
-            alert(playlist + morceau);
         }
 
     </script>
